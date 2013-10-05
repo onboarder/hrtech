@@ -16,4 +16,5 @@ log/*.log
 coverage.html
 .settings
 doc
-
+public/stylesheets/cache_*.css
+public/javascripts/cache_*.js
