@@ -7,9 +7,9 @@ html
     != csrfMetaTag()
   body
     .navbar
-        .navbar-inner
-            .container
-               a.brand(href='#') Project name
+      .navbar-inner
+        .container
+          a.brand(href='#{pathTo.root}') #HRTech Photo Stream
 
     .container
       - var flash = request.flash('info').pop(); if (flash) {
@@ -24,5 +24,5 @@ html
 
       hr
       footer
-        p © Company 2012
+        p!= 'This website is not affiliated with <a href="http://www.hrtechconference.com/">#hrtech</a>.'
   != contentFor('javascripts')
