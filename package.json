@@ -15,7 +15,8 @@
   , "seedjs": "latest"
   , "co-assets-compiler": "*"
   , "socket.io": "latest"
-  , "ntwitter": "latest" 
+  , "ntwitter": "latest"
+  , "underscore": "latest" 
   },
   "devDependencies":
   { "nodeunit": "*"
