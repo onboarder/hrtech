@@ -3,26 +3,25 @@ html
   head
     title= title
     != stylesheetLinkTag('bootstrap', 'application', 'bootstrap-responsive')
+    script(src="/socket.io/socket.io.js")
     != javascriptIncludeTag('https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js', 'rails', 'application')
     != csrfMetaTag()
+    script
+      var socket = io.connect('http://localhost');
+      socket.on('photo', function (data) {
+        console.log(data);
+        //- socket.emit('my other event', { my: 'data' });
+      });
   body
-    .navbar
-      .navbar-inner
-        .container
-          a.brand(href='#{pathTo.root}') #HRTech Photo Stream
-
     .container
-      - var flash = request.flash('info').pop(); if (flash) {
-        .alert.alert-info= flash
-      - }
-
-      - flash = request.flash('error').pop(); if (flash) {
-        .alert.alert-error= flash
-      - }
+      h1.center
+        <a href="http://www.hrtechconference.com/">#HRTech</a> Live Stream
 
       != body
 
       hr
       footer
+        p.
+          Shared with love from <a href="https://onboarder.co">Onboarder</a>
         p!= 'This website is not affiliated with <a href="http://www.hrtechconference.com/">#hrtech</a>.'
   != contentFor('javascripts')

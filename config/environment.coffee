@@ -6,7 +6,7 @@ module.exports = (compound) ->
   app.configure ->
     app.enable 'coffee'
 
-    app.set 'cssEngine', 'stylus'
+    app.set 'cssEngine', 'scss'
     compound.loadConfigs __dirname
 
     # make sure you run `npm install railway-routes browserify`

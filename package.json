@@ -11,10 +11,11 @@
   , "jugglingdb": ">= 0.1.0"
   
   , "coffee-script": ">= 1.1.1"
-  , "stylus": "latest"
+  , "node-sass": "latest"
   , "seedjs": "latest"
   , "co-assets-compiler": "*"
-  , "co-socket": "latest"
+  , "socket.io": "latest"
+  , "ntwitter": "latest" 
   },
   "devDependencies":
   { "nodeunit": "*"
